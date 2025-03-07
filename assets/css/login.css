@@ -1,0 +1,14 @@
+:root {
+    --login-container-background: #1E1F21;
+    --box-shadow-color: #000000;
+}
+
+.login-container {
+    background-color: var(--login-container-background);
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
