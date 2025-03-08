@@ -6,7 +6,7 @@ class UserModel extends BaseModel {
         $params[':deleted'] = $deleted;
 
         if ($id > 0) {
-            $query = $this->get_query('users', 'get');
+            $query = $this->get_query('users', 'get-by-id');
             $params[':id'] = $id;
         }
         elseif (!empty($email)) {

@@ -30,7 +30,7 @@
                         <span class="text-danger">*</span>
                     </label>
 
-                    <input type="email" name="username" id="email" placeholder="E-Mail" class="form-control" required />
+                    <input type="email" name="email" id="email" placeholder="E-Mail" class="form-control" required />
                 </div>
 
                 <div class="mb-3">

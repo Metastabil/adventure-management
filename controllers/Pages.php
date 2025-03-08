@@ -113,7 +113,7 @@ class Pages extends BaseController {
                     'id' => (int)$user['id']
                 ];
 
-                redirect(base_url('users'));
+                redirect(base_url('admin/users'));
             }
 
             $_SESSION['message'] = [
