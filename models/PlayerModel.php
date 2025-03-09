@@ -22,11 +22,11 @@ class PlayerModel extends BaseModel {
 
         $result = $statement->fetchAll();
 
-        return !empty($statement) && ($id > 0 || !empty($username)) ? $result[0] : $result;
+        return !empty($result) && ($id > 0 || !empty($username)) ? $result[0] : $result;
     }
 
     public function insert(array $data) :int|bool {
-        $query = $this->get_query('users', 'insert');
+        $query = $this->get_query('players', 'insert');
 
         if ($this->db->prepare($query)->execute($data)) {
             return $this->db->lastInsertId();
@@ -36,7 +36,7 @@ class PlayerModel extends BaseModel {
     }
 
     public function update(array $data) :bool {
-        $query = $this->get_query('users', 'update');
+        $query = $this->get_query('players', 'update');
 
         return $this->db->prepare($query)->execute($data);
     }

@@ -13,4 +13,10 @@ $routes['admin/show-user/:param'] = ['Users', 'show'];
 $routes['admin/update-user/:param'] = ['Users', 'update'];
 $routes['admin/delete-user/:param'] = ['Users', 'delete'];
 
+$routes['admin/players'] = ['Players', 'index'];
+$routes['admin/create-player'] = ['Players', 'create'];
+$routes['admin/show-player/:param'] = ['Players', 'show'];
+$routes['admin/update-player/:param'] = ['Players', 'update'];
+$routes['admin/delete-player/:param'] = ['Players', 'delete'];
+
 return $routes;
