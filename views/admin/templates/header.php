@@ -35,6 +35,9 @@
                                         <a class="dropdown-item" href="<?= base_url('admin/players') ?>">
                                             Spieler
                                         </a>
+                                        <a class="dropdown-item" href="<?= base_url('admin/inventories') ?>">
+                                            Inventare
+                                        </a>
                                     </li>
                                 </ul>
                             </li>

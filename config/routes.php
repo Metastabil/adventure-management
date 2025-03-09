@@ -19,4 +19,7 @@ $routes['admin/show-player/:param'] = ['Players', 'show'];
 $routes['admin/update-player/:param'] = ['Players', 'update'];
 $routes['admin/delete-player/:param'] = ['Players', 'delete'];
 
+$routes['admin/inventories'] = ['Inventories', 'index'];
+$routes['admin/show-inventory/:param'] = ['Inventories', 'show'];
+
 return $routes;

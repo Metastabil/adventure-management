@@ -1,14 +1,17 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\InventoryModel;
 use App\Models\PlayerModel;
 
 class Players extends BaseController {
+    private InventoryModel $inventory_model;
     private PlayerModel $player_model;
 
     public function __construct() {
         parent::__construct();
 
+        $this->inventory_model = new InventoryModel();
         $this->player_model = new PlayerModel();
     }
 
@@ -50,7 +53,11 @@ class Players extends BaseController {
                 redirect(base_url('admin/create-player'));
             }
 
-            if ($this->player_model->insert($input)) {
+            $response = $this->player_model->insert($input);
+
+            if (!is_bool($response) && $response > 0) {
+                $this->inventory_model->insert([ 'player_id' => $response ]);
+
                 $_SESSION['message'] = [
                     'type' => 'success',
                     'message' => 'Der Spieler wurde erfolgreich angelegt.'
