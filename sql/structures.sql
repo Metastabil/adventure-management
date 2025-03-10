@@ -30,6 +30,20 @@ CREATE TABLE `inventories` (
     FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
 );
 
+-- Resources
+CREATE TABLE `resources` (
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `description` TEXT,
+    `deleted` BOOLEAN DEFAULT FALSE,
+    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `updated` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- #####################################################################################################################
+-- # Views #############################################################################################################
+-- #####################################################################################################################
+
 -- View Inventories
 CREATE VIEW `v_inventories` AS
     SELECT `inventories`.`id`,

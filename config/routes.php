@@ -22,4 +22,10 @@ $routes['admin/delete-player/:param'] = ['Players', 'delete'];
 $routes['admin/inventories'] = ['Inventories', 'index'];
 $routes['admin/show-inventory/:param'] = ['Inventories', 'show'];
 
+$routes['admin/resources'] = ['Resources', 'index'];
+$routes['admin/create-resource'] = ['Resources', 'create'];
+$routes['admin/show-resource/:param'] = ['Resources', 'show'];
+$routes['admin/update-resource/:param'] = ['Resources', 'update'];
+$routes['admin/delete-resource/:param'] = ['Resources', 'delete'];
+
 return $routes;
